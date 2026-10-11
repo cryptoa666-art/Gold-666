@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RedWatch</title>
+<style>
+:root{--bg:#111418;--cd:#1b2027;--tx:#e8eaed;--mu:#9aa3af;--bd:#2d343d;--rd:#d93025;--ac:#4c8dff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px Tahoma,sans-serif;padding:env(safe-area-inset-top,24px) 0 70px}
+main{padding:12px}.c{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:10px}
+.ev{border-right:4px solid var(--rd)}.r{display:flex;gap:8px;flex-wrap:wrap}.r>*{flex:1;min-width:110px}
+input,select,textarea,button{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+textarea{min-height:70px}button.p{background:var(--ac);border:0;font-weight:700}
+label{font-size:12px;color:var(--mu);display:block;margin:6px 0 2px}.s{font-size:12px;color:var(--mu)}
+.t{font-size:13px;direction:ltr;text-align:right;color:var(--mu)}.t b{color:var(--tx)}
+.g{display:inline-block;font-size:11px;padding:2px 7px;border-radius:99px;background:var(--rd);margin-left:6px}
+.w{color:#ffb74d}.d{font-weight:700;color:var(--mu);font-size:13px;margin:12px 2px 6px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--cd);border-top:1px solid var(--bd)}
+nav button{border:0;border-radius:0;background:none;color:var(--mu);padding:15px 2px}nav .on{color:var(--ac);font-weight:700}
+</style></head><body><main id="a"></main>
+<nav><button data-t="ff">ForexFactory</button><button data-t="ax">ArroxFund</button><button data-t="an">تحلیل</button><button data-t="st">تنظیمات</button></nav>
+<script>
+var IR=3.5*36e5,P=(window.Capacitor&&Capacitor.Plugins)||{},ev=[],nt={},cfg={al:15,from:'',to:'',tab:'ff',sel:'',upd:''};
+var URLS=['https://nfs.faireconomy.media/ff_calendar_thisweek.json','https://nfs.faireconomy.media/ff_calendar_nextweek.json'];
+function ld(){try{ev=JSON.parse(localStorage.ev||'[]');nt=JSON.parse(localStorage.nt||'{}');Object.assign(cfg,JSON.parse(localStorage.cfg||'{}'))}catch(e){}}
+function sv(){try{localStorage.ev=JSON.stringify(ev);localStorage.nt=JSON.stringify(nt);localStorage.cfg=JSON.stringify(cfg)}catch(e){}}
+function p2(n){return(n<10?'0':'')+n}
